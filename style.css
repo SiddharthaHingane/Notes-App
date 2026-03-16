@@ -1,0 +1,346 @@
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    padding:20px;
+    transition: background 0.3s;
+}
+
+h1{
+    text-align:left;
+    margin-bottom:10px;
+}
+
+
+/* TOP CONTROLS */
+
+#searchBar{
+    padding:10px 14px;
+    border-radius:8px;
+    border:1px solid #ccc;
+  
+    font-size:14px;
+    width:500px;
+
+    outline:none;
+    margin-right:10px;
+
+    transition:all 0.2s ease;
+}
+
+#searchBar:focus{
+    border-color:#4CAF50;
+    box-shadow:0 0 5px rgba(76,175,80,0.4);
+}
+
+
+#themeToggle{
+    padding:10px 16px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#333;
+    color:white;
+
+    font-size:14px;
+    cursor:pointer;
+
+    transition:all 0.2s ease;
+}
+
+#themeToggle:hover{
+    background:#555;
+}
+
+
+
+/* NOTES CONTAINER */
+
+#notesContainer{
+    margin-top:20px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+
+
+/* NOTE CARD */
+
+.note{
+    width:200px;
+    min-height:150px;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    position:relative;
+
+    box-shadow:0 3px 8px rgba(0,0,0,0.15);
+
+    display:flex;
+    flex-direction:column;
+}
+
+
+
+/* TITLE */
+
+.noteTitle{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+
+    font-size:18px;
+    font-weight:600;
+
+    margin-bottom:6px;
+}
+
+
+
+/* CONTENT */
+
+.noteContent{
+    width:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+
+    font-size:14px;
+    resize:none;
+
+    flex-grow:1;
+}
+
+
+
+/* PIN ICON */
+
+.pinIcon{
+    position:absolute;
+    top:6px;
+    left:6px;
+    font-size:14px;
+}
+
+
+
+/* 3 DOT BUTTON */
+
+.menuBtn{
+    position:absolute;
+    top:5px;
+    right:5px;
+
+    border:none;
+    background:none;
+
+    font-size:18px;
+    cursor:pointer;
+}
+
+
+
+/* MENU */
+
+.menu{
+    position:absolute;
+    top:30px;
+    right:5px;
+
+    background:white;
+
+    border-radius:8px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+    display:none;
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+.showMenu{
+    display:flex;
+}
+
+.menu button{
+    border:none;
+    background:none;
+
+    padding:10px 14px;
+
+    text-align:left;
+
+    cursor:pointer;
+    font-size:14px;
+
+    transition:background 0.2s;
+}
+
+.menu button:hover{
+    background:#f2f2f2;
+}
+
+
+
+/* FLOATING ADD BUTTON */
+.fab{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    padding: 14px 22px;
+    border-radius: 30px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    background: green;
+    color: white;
+
+    cursor: pointer;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    transition: all 0.35s ease;
+}
+
+.fab:hover{
+    transform:scale(1.05);
+}
+
+.fab.small{
+    width:60px;
+    height:60px;
+
+    padding:0;
+    border-radius:50%;
+
+    justify-content:center;
+}
+
+.fab.small .label{
+    opacity:0;
+    width:0;
+    overflow:hidden;
+}
+
+/* DARK MODE */
+
+.darkMode{
+    background:#1e1e1e;
+    color:white;
+}
+
+.darkMode #searchBar{
+    background:#333;
+    border:1px solid #555;
+    color:white;
+}
+
+.darkMode #themeToggle{
+    background:#eee;
+    color:black;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.darkMode .note{
+    color:black;
+}
+
+.darkMode .menu{
+    background:#333;
+}
+
+.darkMode .menu button{
+    color:white;
+}
+
+.darkMode .menu button:hover{
+    background:#444;
+}
+
+.topBar{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin-top:15px;
+}
+
+#searchBar{
+    display:block;
+    margin:0 auto;
+    position:left;
+}
+
+#themeToggle{
+    position:absolute;
+    right:0;
+    top:0;
+    margin-right:15px;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px){
+
+    /* SEARCH BAR */
+
+    #searchBar{
+    width:350px;
+    padding:10px 15px;
+    border-radius:20px;
+    border:1px solid #ccc;
+    }
+
+    /* DARK MODE BUTTON */
+
+    #themeToggle{
+    padding:8px 12px;
+    border:none;
+    border-radius:10px;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    position:right;
+    margin-top: 15px;
+    margin-right: 10px;
+    }
+
+    /* NOTES CONTAINER */
+
+    #notesContainer{
+        gap:10px;
+        justify-content:center;
+    }
+
+    /* NOTE SIZE */
+
+    .note{
+        width:90%;
+        min-height:130px;
+    }
+
+    /* TITLE SIZE */
+
+    .noteTitle{
+        font-size:16px;
+    }
+
+    /* CONTENT SIZE */
+
+    .noteContent{
+        font-size:13px;
+    }
+
+}
