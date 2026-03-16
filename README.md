@@ -22,11 +22,11 @@ The app allows users to create, search, and manage notes efficiently with a clea
 
 ## 🖥️ Preview
 
-*(Add screenshots of your app here)*
+<img src="images/Preview.png" height=888 width=500 alt="App Screenshot">
 
-Example:
+<br><br>
 
-![App Screenshot](screenshots/app-preview.png)
+<img src="images/Dark-Mode.png" height=888 width=500 alt="Dark Mode Preview">
 
 ---
 
@@ -49,7 +49,7 @@ notes-app/
 ├── index.html        # Main application page
 ├── style.css         # Styling and layout
 ├── script.js         # Application functionality
-├── screenshots/      # Images used in README
+├── images/           # Images used in README
 └── README.md         # Project documentation
 ```
 
